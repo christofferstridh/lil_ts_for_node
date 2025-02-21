@@ -1,0 +1,861 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "My API",
+    "description": "Description",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/contact": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Add new user.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string",
+                  "example": "dffs"
+                },
+                "lastName": {
+                  "type": "string",
+                  "example": "fghfgh"
+                },
+                "email": {
+                  "type": "string",
+                  "example": ""
+                },
+                "company": {
+                  "type": "string",
+                  "example": ""
+                },
+                "phone": {
+                  "type": "number",
+                  "example": 46454
+                },
+                "created_date": {
+                  "type": "string",
+                  "example": ""
+                }
+              },
+              "required": [
+                "firstName",
+                "lastName",
+                "email",
+                "company",
+                "phone",
+                "created_date"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/contact/{contactId}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "contactId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "contactId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "contactId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Contact": {
+      "type": "object",
+      "properties": {
+        "obj": {
+          "type": "object",
+          "properties": {
+            "firstName": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "function"
+                },
+                "required": {
+                  "type": "string",
+                  "example": "Enter a first name"
+                }
+              }
+            },
+            "lastName": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "function"
+                },
+                "required": {
+                  "type": "string",
+                  "example": "Enter a last name"
+                }
+              }
+            },
+            "email": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "function"
+                }
+              }
+            },
+            "company": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "function"
+                }
+              }
+            },
+            "phone": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "function"
+                }
+              }
+            },
+            "created_date": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "function"
+                },
+                "default": {
+                  "type": "function"
+                }
+              }
+            }
+          }
+        },
+        "paths": {
+          "type": "object",
+          "properties": {
+            "firstName": {
+              "type": "object",
+              "properties": {
+                "enumValues": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
+                },
+                "regExp": {},
+                "path": {
+                  "type": "string",
+                  "example": "firstName"
+                },
+                "instance": {
+                  "type": "string",
+                  "example": "String"
+                },
+                "validators": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "validator": {
+                        "type": "function"
+                      },
+                      "message": {
+                        "type": "string",
+                        "example": "Enter a first name"
+                      },
+                      "type": {
+                        "type": "string",
+                        "example": "required"
+                      }
+                    }
+                  }
+                },
+                "getters": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
+                },
+                "setters": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
+                },
+                "_presplitPath": {
+                  "type": "array",
+                  "example": [
+                    "firstName"
+                  ],
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "options": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "function"
+                    },
+                    "required": {
+                      "type": "string",
+                      "example": "Enter a first name"
+                    }
+                  }
+                },
+                "_index": {},
+                "isRequired": {
+                  "type": "boolean",
+                  "example": true
+                },
+                "requiredValidator": {
+                  "type": "function"
+                },
+                "originalRequiredValue": {
+                  "type": "string",
+                  "example": "Enter a first name"
+                }
+              }
+            },
+            "lastName": {
+              "type": "object",
+              "properties": {
+                "enumValues": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
+                },
+                "regExp": {},
+                "path": {
+                  "type": "string",
+                  "example": "lastName"
+                },
+                "instance": {
+                  "type": "string",
+                  "example": "String"
+                },
+                "validators": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "validator": {
+                        "type": "function"
+                      },
+                      "message": {
+                        "type": "string",
+                        "example": "Enter a last name"
+                      },
+                      "type": {
+                        "type": "string",
+                        "example": "required"
+                      }
+                    }
+                  }
+                },
+                "getters": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
+                },
+                "setters": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
+                },
+                "_presplitPath": {
+                  "type": "array",
+                  "example": [
+                    "lastName"
+                  ],
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "options": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "function"
+                    },
+                    "required": {
+                      "type": "string",
+                      "example": "Enter a last name"
+                    }
+                  }
+                },
+                "_index": {},
+                "isRequired": {
+                  "type": "boolean",
+                  "example": true
+                },
+                "requiredValidator": {
+                  "type": "function"
+                },
+                "originalRequiredValue": {
+                  "type": "string",
+                  "example": "Enter a last name"
+                }
+              }
+            },
+            "email": {
+              "type": "object",
+              "properties": {
+                "enumValues": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
+                },
+                "regExp": {},
+                "path": {
+                  "type": "string",
+                  "example": "email"
+                },
+                "instance": {
+                  "type": "string",
+                  "example": "String"
+                },
+                "validators": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
+                },
+                "getters": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
+                },
+                "setters": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
+                },
+                "_presplitPath": {
+                  "type": "array",
+                  "example": [
+                    "email"
+                  ],
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "options": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "function"
+                    }
+                  }
+                },
+                "_index": {}
+              }
+            },
+            "company": {
+              "type": "object",
+              "properties": {
+                "enumValues": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
+                },
+                "regExp": {},
+                "path": {
+                  "type": "string",
+                  "example": "company"
+                },
+                "instance": {
+                  "type": "string",
+                  "example": "String"
+                },
+                "validators": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
+                },
+                "getters": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
+                },
+                "setters": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
+                },
+                "_presplitPath": {
+                  "type": "array",
+                  "example": [
+                    "company"
+                  ],
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "options": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "function"
+                    }
+                  }
+                },
+                "_index": {}
+              }
+            },
+            "phone": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "example": "phone"
+                },
+                "instance": {
+                  "type": "string",
+                  "example": "Number"
+                },
+                "validators": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
+                },
+                "getters": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
+                },
+                "setters": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
+                },
+                "_presplitPath": {
+                  "type": "array",
+                  "example": [
+                    "phone"
+                  ],
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "options": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "function"
+                    }
+                  }
+                },
+                "_index": {}
+              }
+            },
+            "created_date": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "example": "created_date"
+                },
+                "instance": {
+                  "type": "string",
+                  "example": "Date"
+                },
+                "validators": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
+                },
+                "getters": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
+                },
+                "setters": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
+                },
+                "_presplitPath": {
+                  "type": "array",
+                  "example": [
+                    "created_date"
+                  ],
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "options": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "function"
+                    },
+                    "default": {
+                      "type": "function"
+                    }
+                  }
+                },
+                "_index": {},
+                "defaultValue": {
+                  "type": "function"
+                }
+              }
+            },
+            "_id": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "example": "_id"
+                },
+                "instance": {
+                  "type": "string",
+                  "example": "ObjectId"
+                },
+                "validators": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
+                },
+                "getters": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
+                },
+                "setters": {
+                  "type": "array",
+                  "example": [
+                    null
+                  ],
+                  "items": {
+                    "type": "function"
+                  }
+                },
+                "_presplitPath": {
+                  "type": "array",
+                  "example": [
+                    "_id"
+                  ],
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "options": {
+                  "type": "object",
+                  "properties": {
+                    "auto": {
+                      "type": "boolean",
+                      "example": true
+                    },
+                    "type": {
+                      "type": "string",
+                      "example": "ObjectId"
+                    }
+                  }
+                },
+                "_index": {},
+                "defaultValue": {
+                  "type": "function"
+                }
+              }
+            }
+          }
+        },
+        "aliases": {
+          "type": "object",
+          "properties": {}
+        },
+        "subpaths": {
+          "type": "object",
+          "properties": {}
+        },
+        "virtuals": {
+          "type": "object",
+          "properties": {}
+        },
+        "singleNestedPaths": {
+          "type": "object",
+          "properties": {}
+        },
+        "nested": {
+          "type": "object",
+          "properties": {}
+        },
+        "inherits": {
+          "type": "object",
+          "properties": {}
+        },
+        "callQueue": {
+          "type": "array",
+          "example": [],
+          "items": {}
+        },
+        "_indexes": {
+          "type": "array",
+          "example": [],
+          "items": {}
+        },
+        "_searchIndexes": {
+          "type": "array",
+          "example": [],
+          "items": {}
+        },
+        "methods": {
+          "type": "object",
+          "properties": {}
+        },
+        "methodOptions": {
+          "type": "object",
+          "properties": {}
+        },
+        "statics": {
+          "type": "object",
+          "properties": {}
+        },
+        "tree": {
+          "type": "object",
+          "properties": {
+            "firstName": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "function"
+                },
+                "required": {
+                  "type": "string",
+                  "example": "Enter a first name"
+                }
+              }
+            },
+            "lastName": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "function"
+                },
+                "required": {
+                  "type": "string",
+                  "example": "Enter a last name"
+                }
+              }
+            },
+            "email": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "function"
+                }
+              }
+            },
+            "company": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "function"
+                }
+              }
+            },
+            "phone": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "function"
+                }
+              }
+            },
+            "created_date": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "function"
+                },
+                "default": {
+                  "type": "function"
+                }
+              }
+            },
+            "_id": {
+              "type": "object",
+              "properties": {
+                "auto": {
+                  "type": "boolean",
+                  "example": true
+                },
+                "type": {
+                  "type": "string",
+                  "example": "ObjectId"
+                }
+              }
+            }
+          }
+        },
+        "query": {
+          "type": "object",
+          "properties": {}
+        },
+        "childSchemas": {
+          "type": "array",
+          "example": [],
+          "items": {}
+        },
+        "plugins": {
+          "type": "array",
+          "example": [],
+          "items": {}
+        },
+        "id": {
+          "type": "number",
+          "example": 1
+        },
+        "mapPaths": {
+          "type": "array",
+          "example": [],
+          "items": {}
+        },
+        "s": {
+          "type": "object",
+          "properties": {
+            "hooks": {
+              "type": "object",
+              "properties": {
+                "_pres": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "_posts": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            }
+          }
+        },
+        "_userProvidedOptions": {
+          "type": "object",
+          "properties": {}
+        },
+        "options": {
+          "type": "object",
+          "properties": {
+            "strict": {
+              "type": "boolean",
+              "example": true
+            },
+            "strictQuery": {
+              "type": "boolean",
+              "example": false
+            },
+            "bufferCommands": {
+              "type": "boolean",
+              "example": true
+            },
+            "capped": {
+              "type": "boolean",
+              "example": false
+            },
+            "versionKey": {
+              "type": "string",
+              "example": "__v"
+            },
+            "optimisticConcurrency": {
+              "type": "boolean",
+              "example": false
+            },
+            "minimize": {
+              "type": "boolean",
+              "example": true
+            },
+            "autoIndex": {},
+            "discriminatorKey": {
+              "type": "string",
+              "example": "__t"
+            },
+            "shardKey": {},
+            "read": {},
+            "validateBeforeSave": {
+              "type": "boolean",
+              "example": true
+            },
+            "validateModifiedOnly": {
+              "type": "boolean",
+              "example": false
+            },
+            "_id": {
+              "type": "boolean",
+              "example": true
+            },
+            "id": {
+              "type": "boolean",
+              "example": true
+            },
+            "typeKey": {
+              "type": "string",
+              "example": "type"
+            }
+          }
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  }
+}
