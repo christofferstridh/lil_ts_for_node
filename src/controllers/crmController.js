@@ -11,6 +11,7 @@ export const addNewContact = (req, res) => {
 };
 
 export const getContacts = (req, res) => {
+    console.log("sdjhfksh");
     Contact.find({}).then(items=>res.json(items)).catch((err)=>console.log(err));
 };
 
