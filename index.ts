@@ -1,4 +1,4 @@
-import express from 'express';
+import express, {Request, Response} from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import routes from './src/routes/crmRoutes.js';
@@ -7,8 +7,9 @@ import swaggerUi from 'swagger-ui-express';
 //import swaggerDocument from './swagger.json';
 
 const app = express();
-const PORT = 3000;
+const PORT:number = Settings.PORT;
 
+let messages = new Messenger(PORT, 'dev');
 
 // mongoose connection
 mongoose.Promise = global.Promise;
@@ -24,9 +25,9 @@ routes(app);
 // serving static files
 app.use(express.static('public'));
 
-app.get('/', (req, res) =>
-    res.send(`Node and express server is running on port ${PORT}`)
-);
+app.get('/', (req: Request, res:Response):void => {
+    res.send(messages.messagePrint());
+});
 
 // const options = {
 //     definition: {
@@ -54,10 +55,12 @@ app.get('/', (req, res) =>
 //     apis: ['./src/routes/*.js'],
 //     };
 import swaggerDoc from './swagger-output.json' with {type:"json"};
+import {Messenger} from './src/controllers/createMessage.js';
+import { Settings } from './settings.js';
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc));
 
 
 
 app.listen(PORT, () =>
-    console.log(`your server is running on port ${PORT}`)
+    console.log(messages.messagePrint())
 );

@@ -1,15 +1,22 @@
-import mongoose from 'mongoose';
+import {Schema} from 'mongoose';
 
-const Schema = mongoose.Schema;
+export interface Contact {
+    firstName: string,
+    lastName: string,
+    email?: string,
+    company?: string,
+    phone?: number,
+    created_date?: Date
+}
 
-export const ContactSchema = new Schema({
+export const contactSchema = new Schema<Contact>({
     firstName: {
         type: String,
-        required: 'Enter a first name'
+        required: true
     },
     lastName: {
         type: String,
-        required: 'Enter a last name'
+        required: true
     },
     email: {
         type: String

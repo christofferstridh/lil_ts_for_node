@@ -49,19 +49,11 @@
                 "phone": {
                   "type": "number",
                   "example": 46454
-                },
-                "created_date": {
-                  "type": "string",
-                  "example": ""
                 }
               },
               "required": [
                 "firstName",
-                "lastName",
-                "email",
-                "company",
-                "phone",
-                "created_date"
+                "lastName"
               ]
             }
           }
